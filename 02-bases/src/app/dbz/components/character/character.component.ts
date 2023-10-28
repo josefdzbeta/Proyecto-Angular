@@ -10,6 +10,8 @@ import { EventEmitter } from '@angular/core';
 export class CharacterComponent {
 
   @Output() // We use this decorator to emit an event to the parent component (main-page.component.ts)
+
+  
   public onNewCharacter: EventEmitter<Character> = new EventEmitter(); // We use this event to send the new character to the parent component
 
   public character: Character = {

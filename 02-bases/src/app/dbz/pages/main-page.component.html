@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col">
 
-    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteId($event)"></dbz-list> <!--  -->
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
 
   </div>
   <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character> <!-- The parent component is listening to an event called onNewCharacter that is emitted by the child component. When the event is triggered, the parent component will call the onNewCharacter method and pass the event data as an argument.  -->

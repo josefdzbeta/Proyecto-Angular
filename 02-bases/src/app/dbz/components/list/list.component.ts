@@ -17,11 +17,12 @@ export class ListComponent {
 
   // onDeleteId
   @Output() // This decorator is used to emit an event to the parent component (main-page.component.ts)
-  public onDeleteId: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(index:number): void {
+  onDeleteCharacter(id?:string): void {
     //Emitir el Id del personaje a eliminar
-    this.onDeleteId.emit(index);
+    if (!id) return; // If the id is not defined, we return
+    this.onDelete.emit(id);
   }
 
   //input is used to receive data from the parent component, output is used to emit an event to the parent component
