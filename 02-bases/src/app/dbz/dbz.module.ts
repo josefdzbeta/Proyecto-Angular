@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DbzMainComponent } from './pages/main-page.component';
-
+import { MainPageComponent } from './pages/main-page.component';
+import { ListComponent } from './components/list/list.component';
+import { CharacterComponent } from './components/character/character.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    DbzMainComponent, 
+    MainPageComponent,
+    ListComponent,
+    CharacterComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule, // We import this module to use ngIf directive
+    FormsModule, // We import this module to use ngModel directive
   ],
   exports: [
-    DbzMainComponent
+    MainPageComponent// We export this component to use it in app.module.ts
   ]
 })
 export class DbzModule { }
